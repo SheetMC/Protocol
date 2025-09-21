@@ -18,6 +18,7 @@
 
 plugins {
     kotlin("jvm") version "2.2.10"
+    kotlin("plugin.serialization") version "2.2.0"
     id("org.jetbrains.dokka") version "2.0.0"
 }
 
@@ -30,7 +31,14 @@ repositories {
 }
 
 dependencies {
+    // https://github.com/SheetMC/Core
     implementation("com.github.SheetMC:Core:main-SNAPSHOT")
+    // https://github.com/Kotlin/kotlinx.serialization
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.9.0")
+    // https://github.com/BenWoodworth/knbt
+    implementation("net.benwoodworth.knbt:knbt:0.11.8")
+
+
     testImplementation(kotlin("test"))
 }
 
