@@ -16,14 +16,14 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.sheetmc.protocol.type.data
+package org.sheetmc.protocol.`772`.type.data
 
 import org.sheetmc.core.Outcome
 import org.sheetmc.core.failure
 import org.sheetmc.core.success
-import org.sheetmc.protocol.type.Identifier
-import org.sheetmc.protocol.type.readIdentifier
-import org.sheetmc.protocol.type.writeIdentifier
+import org.sheetmc.protocol.`772`.type.Identifier
+import org.sheetmc.protocol.`772`.type.readIdentifier
+import org.sheetmc.protocol.`772`.type.writeIdentifier
 import java.io.InputStream
 import java.io.OutputStream
 

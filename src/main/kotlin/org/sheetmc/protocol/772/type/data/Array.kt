@@ -16,7 +16,7 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.sheetmc.protocol.type.data
+package org.sheetmc.protocol.`772`.type.data
 
 import org.sheetmc.core.Outcome
 import org.sheetmc.core.failure

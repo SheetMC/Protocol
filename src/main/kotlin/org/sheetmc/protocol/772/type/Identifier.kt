@@ -16,13 +16,13 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.sheetmc.protocol.type
+package org.sheetmc.protocol.`772`.type
 
 import org.sheetmc.core.Outcome
 import org.sheetmc.core.failure
 import org.sheetmc.core.success
-import org.sheetmc.protocol.type.data.readString
-import org.sheetmc.protocol.type.data.writeString
+import org.sheetmc.protocol.`772`.type.data.readString
+import org.sheetmc.protocol.`772`.type.data.writeString
 import java.io.InputStream
 import java.io.OutputStream
 

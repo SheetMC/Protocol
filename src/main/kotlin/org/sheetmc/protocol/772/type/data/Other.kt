@@ -16,11 +16,12 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.sheetmc.protocol.type.data
+package org.sheetmc.protocol.`772`.type.data
 
 import org.sheetmc.core.Outcome
 import org.sheetmc.core.failure
 import org.sheetmc.core.success
+import java.io.EOFException
 import java.io.InputStream
 import java.io.OutputStream
 import java.nio.ByteBuffer
@@ -31,7 +32,7 @@ fun InputStream.readFully(b: ByteArray, off: Int = 0, len: Int = b.size) {
     while (totalBytesRead < len) {
         val bytesRead = read(b, off + totalBytesRead, len - totalBytesRead)
         if (bytesRead == -1) {
-            throw java.io.EOFException("End of stream reached before reading all bytes")
+            throw EOFException("End of stream reached before reading all bytes")
         }
         totalBytesRead += bytesRead
     }
@@ -47,7 +48,7 @@ fun InputStream.readFloat(): Outcome<Float> {
     val bytes = ByteArray(4)
     try {
         readFully(bytes)
-    } catch (e: java.io.EOFException) {
+    } catch (e: EOFException) {
         return failure("Stream ended unexpectedly while reading float")
     }
     return success(ByteBuffer.wrap(bytes).order(ByteOrder.BIG_ENDIAN).float)
